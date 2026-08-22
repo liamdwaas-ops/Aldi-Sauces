@@ -4,6 +4,9 @@ on:
   schedule:
     # 00:00 UTC Wednesday is 10:00 AEST (fixed UTC+10).
     - cron: '0 0 * * 3'
+  push:
+    branches: [main]
+    paths: ['.github/workflows/aldi-market-update.yml']
   workflow_dispatch:
 
 permissions:
@@ -40,5 +43,4 @@ jobs:
             git commit -m "Update Aldi product baseline"
             git push
           }
-
 
