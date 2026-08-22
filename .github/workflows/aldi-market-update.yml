@@ -2,14 +2,15 @@ name: Aldi Sauces Market Update
 
 on:
   schedule:
-    # 00:00 UTC Wednesday is 10:00 AEST (fixed UTC+10).
-    - cron: '0 0 * * 3'
+    # 22:00 UTC Tuesday is 08:00 AEST Wednesday (fixed UTC+10).
+    - cron: '0 22 * * 2'
   push:
     branches: [main]
     paths:
       - '.github/workflows/aldi-market-update.yml'
       - 'scrape-aldi.ps1'
       - 'run-market-update.ps1'
+      - 'send-baseline-test.ps1'
   workflow_dispatch:
 
 permissions:
@@ -32,11 +33,18 @@ jobs:
       - name: Check out monitor
         uses: actions/checkout@v4
 
+      - name: Send requested baseline test
+        if: github.event_name == 'push' && contains(github.event.head_commit.message, 'Send requested baseline test')
+        shell: powershell
+        run: ./send-baseline-test.ps1
+
       - name: Run Aldi comparison and email verified changes
+        if: github.event_name != 'push' || !contains(github.event.head_commit.message, 'Send requested baseline test')
         shell: powershell
         run: ./run-market-update.ps1
 
       - name: Save the successful baseline
+        if: github.event_name != 'push' || !contains(github.event.head_commit.message, 'Send requested baseline test')
         shell: powershell
         run: |
           git config user.name "github-actions[bot]"
