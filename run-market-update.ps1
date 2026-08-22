@@ -41,7 +41,7 @@ function Get-ProductKey {
 
 if (-not $IgnoreScheduleWindow) {
     $aestNow = [TimeZoneInfo]::ConvertTimeBySystemTimeZoneId([DateTimeOffset]::UtcNow, 'E. Australia Standard Time')
-    if ($aestNow.DayOfWeek -ne 'Wednesday' -or $aestNow.Hour -ne 10) { exit 0 }
+    if ($aestNow.DayOfWeek -ne 'Wednesday' -or $aestNow.Hour -ne 8) { exit 0 }
 }
 
 $config = Import-DotEnv $envPath
