@@ -31,6 +31,14 @@ function Get-ImageHash {
     }
 }
 
+function Test-EligibleProductName {
+    param([string]$Name)
+    if ([string]::IsNullOrWhiteSpace($Name)) { return $false }
+    $hasPastaSauce = $Name -match '(?i)\bPasta\b' -and $Name -match '(?i)\bSauce\b'
+    $hasTomatoPaste = $Name -match '(?i)\bTomato\b' -and $Name -match '(?i)\bPaste\b'
+    return $hasPastaSauce -or $hasTomatoPaste
+}
+
 foreach ($searchTerm in $searchTerms) {
     $page = 1
     $seenSkus = [System.Collections.Generic.HashSet[string]]::new()
@@ -53,11 +61,13 @@ foreach ($searchTerm in $searchTerms) {
             $tileHtml = $tile.Value
             $relativeUrl = Get-Field $tileHtml '<a href="([^"]+)" class="base-link product-tile__link'
             $imageUrl = Get-Field $tileHtml '<img class="base-image".*?src="([^"]+)"'
+            $name = Get-Field $tileHtml 'data-test="product-tile__name".*?<p[^>]*>(.*?)</p>'
+            if (-not (Test-EligibleProductName $name)) { continue }
 
             $allProducts.Add([ordered]@{
                 searchTerm = $searchTerm
                 sku        = $sku
-                name       = Get-Field $tileHtml 'data-test="product-tile__name".*?<p[^>]*>(.*?)</p>'
+                name       = $name
                 brand      = Get-Field $tileHtml 'data-test="product-tile__brandname".*?<p[^>]*>(.*?)</p>'
                 sellingSize = Get-Field $tileHtml 'data-test="product-tile__unit-of-measurement".*?<p>(.*?)</p>'
                 price      = Get-Field $tileHtml 'base-price__regular"><span>(.*?)</span>'
