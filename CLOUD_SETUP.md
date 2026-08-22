@@ -1,7 +1,7 @@
 # Cloud setup
 
-This monitor is prepared for GitHub Actions and runs at 00:00 UTC every
-Wednesday, equivalent to 10:00 AEST (fixed UTC+10).
+This monitor is prepared for GitHub Actions and runs at 22:00 UTC every
+Tuesday, equivalent to 08:00 AEST Wednesday (fixed UTC+10).
 
 Repository requirements:
 
