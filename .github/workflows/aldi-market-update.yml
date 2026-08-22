@@ -1,0 +1,44 @@
+name: Aldi Sauces Market Update
+
+on:
+  schedule:
+    # 00:00 UTC Wednesday is 10:00 AEST (fixed UTC+10).
+    - cron: '0 0 * * 3'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: aldi-sauces-market-update
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: windows-latest
+    timeout-minutes: 30
+    env:
+      GMAIL_USERNAME: liamdwaas@gmail.com
+      GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+      EMAIL_RECIPIENT: liam.dewaas@simplot.com
+      EMAIL_SUBJECT: Aldi Sauces Market Update
+    steps:
+      - name: Check out monitor
+        uses: actions/checkout@v4
+
+      - name: Run Aldi comparison and email verified changes
+        shell: powershell
+        run: ./run-market-update.ps1
+
+      - name: Save the successful baseline
+        shell: powershell
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add baseline.json
+          if (-not (git diff --cached --quiet)) {
+            git commit -m "Update Aldi product baseline"
+            git push
+          }
+
+
