@@ -36,7 +36,8 @@ function Test-EligibleProductName {
     if ([string]::IsNullOrWhiteSpace($Name)) { return $false }
     $hasPastaSauce = $Name -match '(?i)\bPasta\b' -and $Name -match '(?i)\bSauce\b'
     $hasTomatoPaste = $Name -match '(?i)\bTomato\b' -and $Name -match '(?i)\bPaste\b'
-    return $hasPastaSauce -or $hasTomatoPaste
+    $hasPassata = $Name -match '(?i)\bPassata\b'
+    return $hasPastaSauce -or $hasTomatoPaste -or $hasPassata
 }
 
 foreach ($searchTerm in $searchTerms) {
