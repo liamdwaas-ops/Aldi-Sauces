@@ -1,5 +1,5 @@
 {
-    "capturedAt":  "2026-08-22T23:33:45.7722147Z",
+    "capturedAt":  "2026-08-24T09:52:02.7758528Z",
     "source":  "https://www.aldi.com.au/",
     "searches":  [
                      "Pasta Sauce",
@@ -225,6 +225,28 @@
                          "imageUrl":  "https://dm.apac.cms.aldi.cx/is/image/aldiprodapac/product/jpg/scaleWidth/232/a7344d08-6ced-4aac-a267-3fa0db07ce1a/Pasta%20Bake%20Creamy%20Tomato%20Mozarella%20Sauce%20500g",
                          "imageSha256":  "f17a769f1d09c170ee7a746d35153ace2fa014165fb59dd57bf7535d9308a34d",
                          "productUrl":  "https://www.aldi.com.au/product/cucina-pasta-bake-creamy-tomato-mozarella-sauce-500g-000000000689259001"
+                     },
+                     {
+                         "searchTerm":  "Pasta Sauce",
+                         "sku":  "000000000000456885",
+                         "name":  "Organic Italian Passata 700g",
+                         "brand":  "REMANO",
+                         "sellingSize":  "700 g",
+                         "price":  "$2.49",
+                         "imageUrl":  "https://dm.apac.cms.aldi.cx/is/image/aldiprodapac/product/jpg/scaleWidth/232/ab2499b0-6e56-4828-af7b-c4550f97f11a/Organic%20Italian%20Passata%20700g",
+                         "imageSha256":  "1185dd18275e8943cade44eaa1a0be5b44f2e57a5b3ee470d6207f94b22b4fca",
+                         "productUrl":  "https://www.aldi.com.au/product/remano-organic-italian-passata-700g-000000000000456885"
+                     },
+                     {
+                         "searchTerm":  "Pasta Sauce",
+                         "sku":  "000000000000457813",
+                         "name":  "Authentic Italian Passata 700g",
+                         "brand":  "REMANO",
+                         "sellingSize":  "700 g",
+                         "price":  "$1.89",
+                         "imageUrl":  "https://dm.apac.cms.aldi.cx/is/image/aldiprodapac/product/jpg/scaleWidth/232/0a72d835-d24a-4a96-b11f-1a409b9f6fde/Authentic%20Italian%20Passata%20700g",
+                         "imageSha256":  "82ee40ac7b6f66c88237dedcde163c2fa3ac377f694cded175430afdfe3d89d7",
+                         "productUrl":  "https://www.aldi.com.au/product/remano-authentic-italian-passata-700g-000000000000457813"
                      },
                      {
                          "searchTerm":  "Tomato Paste",
