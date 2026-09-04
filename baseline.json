@@ -1,5 +1,5 @@
-﻿{
-    "capturedAt":  "2026-09-01T22:03:53.0376708Z",
+{
+    "capturedAt":  "2026-09-04T00:25:36.8074836Z",
     "source":  "https://www.aldi.com.au/",
     "searches":  [
                      "Pasta Sauce",
@@ -216,7 +216,7 @@
                          "productUrl":  "https://www.aldi.com.au/product/cucina-pasta-bake-creamy-tomato-mozarella-sauce-500g-000000000689259001"
                      },
                      {
-                         "searchTerm":  "Pasta Sauce",
+                         "searchTerm":  "Tomato Paste",
                          "sku":  "000000000000456885",
                          "name":  "Organic Italian Passata 700g",
                          "brand":  "REMANO",
@@ -227,7 +227,7 @@
                          "productUrl":  "https://www.aldi.com.au/product/remano-organic-italian-passata-700g-000000000000456885"
                      },
                      {
-                         "searchTerm":  "Pasta Sauce",
+                         "searchTerm":  "Tomato Paste",
                          "sku":  "000000000000457813",
                          "name":  "Authentic Italian Passata 700g",
                          "brand":  "REMANO",
@@ -269,39 +269,7 @@
                          "imageUrl":  "https://dm.apac.cms.aldi.cx/is/image/aldiprodapac/product/jpg/scaleWidth/232/3e8b4023-ec8e-40ce-9bdc-c191cea489cc/Tomato%20Paste%202%20Pack%20140g",
                          "imageSha256":  "cf8190bbdcd0bc81a3156d48cd479be1de1c49382b6bf18e546659205f80a4eb",
                          "productUrl":  "https://www.aldi.com.au/product/remano-tomato-paste-2-pack-140g-000000000000371541"
-                     },
-                     {
-                         "searchTerm":  "Tomato Paste",
-                         "sku":  "000000000000370278",
-                         "name":  "Tomato Pasta Sauce 500g",
-                         "brand":  "REMANO",
-                         "sellingSize":  "500 g",
-                         "price":  "$1.59",
-                         "imageUrl":  "https://dm.apac.cms.aldi.cx/is/image/aldiprodapac/product/jpg/scaleWidth/232/d9443643-350e-46c4-87a9-4759ae66cbc4/Tomato%20Pasta%20Sauce%20500g",
-                         "imageSha256":  "0698bd0de5e5d1e604dd344c46da38499508b48776331c23859d92e3523fee0c",
-                         "productUrl":  "https://www.aldi.com.au/product/remano-tomato-pasta-sauce-500g-000000000000370278"
-                     },
-                     {
-                         "searchTerm":  "Tomato Paste",
-                         "sku":  "000000000370281002",
-                         "name":  "Tomato Onion \u0026 Garlic Pasta Sauce 500g",
-                         "brand":  "REMANO",
-                         "sellingSize":  "500 g",
-                         "price":  "$2.29",
-                         "imageUrl":  "https://dm.apac.cms.aldi.cx/is/image/aldiprodapac/product/jpg/scaleWidth/232/5e1515f7-9835-4e0e-9c80-4f2e6339eb6c/Tomato%20Onion%20%20Garlic%20Pasta%20Sauce%20500g",
-                         "imageSha256":  "4047bf3f54e5f0564917bca576bcb9b1c55907689bb2fff9a32922e6b4198241",
-                         "productUrl":  "https://www.aldi.com.au/product/remano-tomato-onion-garlic-pasta-sauce-500g-000000000370281002"
-                     },
-                     {
-                         "searchTerm":  "Tomato Paste",
-                         "sku":  "000000000689259001",
-                         "name":  "Pasta Bake Creamy Tomato Mozarella Sauce 500g",
-                         "brand":  "CUCINA",
-                         "sellingSize":  "500 g",
-                         "price":  "$2.99",
-                         "imageUrl":  "https://dm.apac.cms.aldi.cx/is/image/aldiprodapac/product/jpg/scaleWidth/232/a7344d08-6ced-4aac-a267-3fa0db07ce1a/Pasta%20Bake%20Creamy%20Tomato%20Mozarella%20Sauce%20500g",
-                         "imageSha256":  "f17a769f1d09c170ee7a746d35153ace2fa014165fb59dd57bf7535d9308a34d",
-                         "productUrl":  "https://www.aldi.com.au/product/cucina-pasta-bake-creamy-tomato-mozarella-sauce-500g-000000000689259001"
                      }
                  ]
 }
+
