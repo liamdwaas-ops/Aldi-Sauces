@@ -5,6 +5,7 @@ param(
 $ErrorActionPreference = 'Stop'
 $searchTerms = @('Pasta Sauce', 'Tomato Paste')
 $allProducts = [System.Collections.Generic.List[object]]::new()
+$retainedSkus = [System.Collections.Generic.HashSet[string]]::new()
 
 function Get-Field {
     param([string]$Html, [string]$Pattern)
@@ -31,13 +32,15 @@ function Get-ImageHash {
     }
 }
 
-function Test-EligibleProductName {
+function Get-CanonicalSearchTerm {
     param([string]$Name)
-    if ([string]::IsNullOrWhiteSpace($Name)) { return $false }
+    if ([string]::IsNullOrWhiteSpace($Name)) { return $null }
     $hasPastaSauce = $Name -match '(?i)\bPasta\b' -and $Name -match '(?i)\bSauce\b'
     $hasTomatoPaste = $Name -match '(?i)\bTomato\b' -and $Name -match '(?i)\bPaste\b'
     $hasPassata = $Name -match '(?i)\bPassata\b'
-    return $hasPastaSauce -or $hasTomatoPaste -or $hasPassata
+    if ($hasTomatoPaste -or $hasPassata) { return 'Tomato Paste' }
+    if ($hasPastaSauce) { return 'Pasta Sauce' }
+    return $null
 }
 
 foreach ($searchTerm in $searchTerms) {
@@ -63,10 +66,11 @@ foreach ($searchTerm in $searchTerms) {
             $relativeUrl = Get-Field $tileHtml '<a href="([^"]+)" class="base-link product-tile__link'
             $imageUrl = Get-Field $tileHtml '<img class="base-image".*?src="([^"]+)"'
             $name = Get-Field $tileHtml 'data-test="product-tile__name".*?<p[^>]*>(.*?)</p>'
-            if (-not (Test-EligibleProductName $name)) { continue }
+            $canonicalSearchTerm = Get-CanonicalSearchTerm $name
+            if (-not $canonicalSearchTerm -or -not $retainedSkus.Add($sku)) { continue }
 
             $allProducts.Add([ordered]@{
-                searchTerm = $searchTerm
+                searchTerm = $canonicalSearchTerm
                 sku        = $sku
                 name       = $name
                 brand      = Get-Field $tileHtml 'data-test="product-tile__brandname".*?<p[^>]*>(.*?)</p>'
