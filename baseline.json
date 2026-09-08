@@ -1,5 +1,5 @@
-{
-    "capturedAt":  "2026-09-04T00:25:36.8074836Z",
+﻿{
+    "capturedAt":  "2026-09-08T22:04:14.2919899Z",
     "source":  "https://www.aldi.com.au/",
     "searches":  [
                      "Pasta Sauce",
@@ -56,7 +56,7 @@
                          "name":  "Premium Basilico Pasta Sauce 500g",
                          "brand":  "CASA BARELLI",
                          "sellingSize":  "500 g",
-                         "price":  "$2.69",
+                         "price":  "$2.49",
                          "imageUrl":  "https://dm.apac.cms.aldi.cx/is/image/aldiprodapac/product/jpg/scaleWidth/232/dc476feb-42db-419a-9d56-1fc0a01a7aa4/Premium%20Basilico%20Pasta%20Sauce%20500g",
                          "imageSha256":  "8c66f4f79534da2ef72472fb6d16c296bd407a0e07ab1b5d3f26fd5e2ecad07a",
                          "productUrl":  "https://www.aldi.com.au/product/casa-barelli-premium-basilico-pasta-sauce-500g-000000000280390001"
@@ -67,7 +67,7 @@
                          "name":  "Premium Napoletana Pasta Sauce 500g",
                          "brand":  "CASA BARELLI",
                          "sellingSize":  "500 g",
-                         "price":  "$2.69",
+                         "price":  "$2.49",
                          "imageUrl":  "https://dm.apac.cms.aldi.cx/is/image/aldiprodapac/product/jpg/scaleWidth/232/05ce5df3-d7c3-4b02-aa86-489b5ca58da3/Premium%20Napoletana%20Pasta%20Sauce%20500g",
                          "imageSha256":  "637a2319cc084847138bb5993a625b01ce54a48845a54ee88e3c8ca82583ac5f",
                          "productUrl":  "https://www.aldi.com.au/product/casa-barelli-premium-napoletana-pasta-sauce-500g-000000000280390002"
@@ -82,17 +82,6 @@
                          "imageUrl":  "https://dm.apac.cms.aldi.cx/is/image/aldiprodapac/product/jpg/scaleWidth/232/eeb0307c-5d07-4943-9910-f242ddca03d4/Organic%20Bolognese%20Pasta%20Sauce%20500g",
                          "imageSha256":  "fb374c10aa1aa6d8075c89723fe1ca7205a81f193f0a7c101acdb4dc134aa2a9",
                          "productUrl":  "https://www.aldi.com.au/product/remano-organic-bolognese-pasta-sauce-500g-000000000365144003"
-                     },
-                     {
-                         "searchTerm":  "Pasta Sauce",
-                         "sku":  "000000000370287001",
-                         "name":  "Premium Carbonara Pasta Sauce 500g",
-                         "brand":  "CASA BARELLI",
-                         "sellingSize":  "500 g",
-                         "price":  "$2.69",
-                         "imageUrl":  "https://dm.apac.cms.aldi.cx/is/image/aldiprodapac/product/jpg/scaleWidth/232/7fa04806-9398-4092-a5b4-f60cfb352b25/Premium%20Carbonara%20Pasta%20Sauce%20500g",
-                         "imageSha256":  "1ee8dced87264c55dad4707b0c5e80c153999f8683014645e5824fb1dd54d352",
-                         "productUrl":  "https://www.aldi.com.au/product/casa-barelli-premium-carbonara-pasta-sauce-500g-000000000370287001"
                      },
                      {
                          "searchTerm":  "Pasta Sauce",
@@ -148,6 +137,17 @@
                          "imageUrl":  "https://dm.apac.cms.aldi.cx/is/image/aldiprodapac/product/jpg/scaleWidth/232/e7af4bb9-57e3-40d3-85a1-c55142a586d7/Toscana%20Gourmet%20Pasta%20Sauce%20400g",
                          "imageSha256":  "12aeccb1c4355093c94f9c51a9178e11ca0081de95f77c5923fc1b13c151b1cf",
                          "productUrl":  "https://www.aldi.com.au/product/specially-selected-toscana-gourmet-pasta-sauce-400g-000000000370279004"
+                     },
+                     {
+                         "searchTerm":  "Pasta Sauce",
+                         "sku":  "000000000370287001",
+                         "name":  "Premium Carbonara Pasta Sauce 500g",
+                         "brand":  "CASA BARELLI",
+                         "sellingSize":  "500 g",
+                         "price":  "$2.69",
+                         "imageUrl":  "https://dm.apac.cms.aldi.cx/is/image/aldiprodapac/product/jpg/scaleWidth/232/7fa04806-9398-4092-a5b4-f60cfb352b25/Premium%20Carbonara%20Pasta%20Sauce%20500g",
+                         "imageSha256":  "1ee8dced87264c55dad4707b0c5e80c153999f8683014645e5824fb1dd54d352",
+                         "productUrl":  "https://www.aldi.com.au/product/casa-barelli-premium-carbonara-pasta-sauce-500g-000000000370287001"
                      },
                      {
                          "searchTerm":  "Pasta Sauce",
@@ -272,4 +272,3 @@
                      }
                  ]
 }
-
